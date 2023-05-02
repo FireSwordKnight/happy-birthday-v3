@@ -3,11 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>传送门</title>
+    <title>🚪传送门🚪</title>
 
-    <link rel="stylesheet" href="stylesheets/moon.css">
-    <link rel="stylesheet" href="stylesheets/firefly.css">
-    <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/moon.css">
+    <link rel="stylesheet" href="/stylesheets/firefly.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <script src="/javascripts/index.js" defer></script>
+    <script src="/javascripts/smoke-mouse.js" defer></script>
+    <script src="/javascripts/long-press-event.js"></script>
 </head>
 
 <body>
@@ -36,13 +39,16 @@
     <!-- background animation -->
     <div class="background-container">
         <div class="stars"></div>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
-        <div class="twinkling"></div>
+        <img class="moon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
         <div class="clouds"></div>
     </div>
+    
+    <!-- smoke cursor effect -->
+    <section id='container'>
+        <canvas></canvas>
+      </section>
 
     <!-- content -->
-    <div contenteditable="true" class="title">Editable text</div>
     <div class="countdown-container" onclick="return false">
         <script src="https://cdn.logwork.com/widget/countdown.js"></script>
 
@@ -50,4 +56,8 @@
             data-timezone="Asia/Shanghai" data-language="ja" data-textcolor="#5ebac9" data-date="2023-05-20 00:00"
             data-background="#F8EDBF" data-digitscolor="#5ebac9" data-unitscolor="#999999">&nbsp</a>
     </div>
+
+    <h1 contenteditable="true" class='transparent'>___の生日传送门</h1>
+    <!-- bgm -->
+    <audio id="bgm" loop src="/assets/taro.m4a"></audio>
 </body>
