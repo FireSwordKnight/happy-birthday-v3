@@ -58,18 +58,28 @@ canvas {
 }
 
 .transparent {
+    -webkit-text-stroke: 1.3px white;
+    letter-spacing: 1.125px;
+    mix-blend-mode: color-dodge;
+  }
+
+#door-title {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 20%;
     text-align: center;
-    -webkit-text-stroke: 1.3px white;
-    letter-spacing: 1.125px;
     font-size: -webkit-xxx-large;
     font-weight: 900;
-    mix-blend-mode: color-dodge;
-  }
+}
 
+#segment-1 {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    transform: rotate(25deg);
+}
+   
 :focus {
     outline: none;
 }

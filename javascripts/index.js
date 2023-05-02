@@ -24,12 +24,46 @@ function switch_cursor() {
 
 window.addEventListener('long-press', switch_cursor);
 
-setTimeout(() => {
-  alert("꒰๑´•.̫ • `๑꒱: 好久不见, 异界的旅客...");
-  setTimeout(() => {
-    alert("꒰๑´•.̫ • `๑꒱: 有个好消息。🪄似乎变得更强大了, 甚至拥有了多种形态...");
-    setTimeout(() => {
-      alert("꒰๑´•.̫ • `๑꒱: 别指望我会告诉你怎么做...");
-    }, 3000);
-  }, 3000);
-}, 3000);
+// Cache door title
+function cache_door_title_change() {
+  document.querySelector('#door-title').addEventListener("focusout", (e) => {
+    localStorage.setItem("door-title", e.target.textContent);
+  });
+}
+cache_door_title_change();
+
+// Update door title
+let door_title = localStorage.getItem('door-title');
+if (door_title)
+  document.querySelector('#door-title').textContent = door_title;
+
+// Dialog
+function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+if ( ! localStorage.getItem('visited') ) {
+  wait(3000)
+    .then(() => {
+      alert("(*。∀。): 好久不见, 异界的旅客...");
+      return wait(3000);
+    })
+    .then(() => {
+      alert("(*。∀。): 我是...守门人");
+      return wait(3000);
+    })
+    .then(() => {
+      alert("(*。∀。): 有一些不算好的消息。你之前拿到的🪄似乎更加...诡异了, 甚至有了别的形态...我也不清楚具体是怎么一回事...");
+      return wait(3000);
+    })
+    .then(() => {
+      alert("(*。∀。): 门可以被起名字了, 我会尽力记住的...当然, 其他人不会知道...因为是本地存储...");
+      return wait(3000);
+    })
+    .then(() => {
+      alert("(*。∀。): 你下次来的时候我就不啰嗦了啊");
+      localStorage.setItem('visited', 'true');
+    })
+    ;
+}
+
