@@ -12,11 +12,11 @@ function play_bgm() {
 
 function switch_cursor() {
   if (!(this.switched)) {
-    document.body.style.cursor = "url('../assets/baton-2-cursor.png'), auto";
+    document.body.style.cursor = "url('assets/baton-2-cursor.png'), auto";
     window.addEventListener('mousemove', play_bgm);
     this.switched = true;
   } else {
-    document.body.style.cursor = "url('../assets/magic-cursor.png') 20 20, auto";
+    document.body.style.cursor = "url('assets/magic-cursor.png') 20 20, auto";
     window.removeEventListener('mousemove', play_bgm);
     this.switched = false;
   }
