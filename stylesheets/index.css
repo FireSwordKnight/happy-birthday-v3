@@ -3,7 +3,7 @@
 }
 
 body {
-    cursor: url("/assets/magic-cursor.png") 20 20, auto;
+    cursor: url("../assets/magic-cursor.png") 20 20, auto;
 }
 
 html,

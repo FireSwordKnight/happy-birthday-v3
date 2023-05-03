@@ -12,11 +12,11 @@ function play_bgm() {
 
 function switch_cursor() {
   if (!(this.switched)) {
-    document.body.style.cursor = "url('/assets/baton-2-cursor.png'), auto";
+    document.body.style.cursor = "url('../assets/baton-2-cursor.png'), auto";
     window.addEventListener('mousemove', play_bgm);
     this.switched = true;
   } else {
-    document.body.style.cursor = "url('/assets/magic-cursor.png') 20 20, auto";
+    document.body.style.cursor = "url('../assets/magic-cursor.png') 20 20, auto";
     window.removeEventListener('mousemove', play_bgm);
     this.switched = false;
   }
@@ -49,11 +49,11 @@ if ( ! localStorage.getItem('visited') ) {
       return wait(3000);
     })
     .then(() => {
-      alert("(*。∀。): 我是...守门人");
+      alert("(*。∀。): 我是...这里的守门人");
       return wait(3000);
     })
     .then(() => {
-      alert("(*。∀。): 有一些不算好的消息。你的🪄似乎更加...诡异了, 甚至有了<别的形态>...我也不清楚具体是怎么一回事...");
+      alert("(*。∀。): 有一些不算好的消息。你的🪄似乎更加...诡异了, 甚至有了<别的形态>...具体的我也不清楚...");
       return wait(3000);
     })
     .then(() => {
@@ -61,7 +61,7 @@ if ( ! localStorage.getItem('visited') ) {
       return wait(3000);
     })
     .then(() => {
-      alert("(*。∀。): 当然, 其他人不会知道的...复述<那位大人>的话, '因为是本地存储', 别问我是什么意思...");
+      alert("(*。∀。): 当然, 其他人不会知道的...按照<那位大人>的话, '因为是本地存储', 别问我是什么意思...");
       return wait(3000);
     })
     .then(() => {
