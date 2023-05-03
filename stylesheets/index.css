@@ -75,7 +75,7 @@ canvas {
 
 #segment-1 {
     position: absolute;
-    right: 1%;
+    left: 1%;
     top: 1%;
     transform: rotate(25deg);
 }
