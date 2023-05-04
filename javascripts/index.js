@@ -7,12 +7,12 @@ function play_bgm() {
   clearTimeout(this.timeout);
   this.timeout = setTimeout(() => {
     bgm.pause();
-  }, 1000);
+  }, 200);
 }
 
 function switch_cursor() {
   if (!(this.switched)) {
-    document.body.style.cursor = "url('assets/baton-2-cursor.png'), auto";
+    document.body.style.cursor = "url('assets/baton-cursor-valid.png'), auto";
     window.addEventListener('mousemove', play_bgm);
     this.switched = true;
   } else {
