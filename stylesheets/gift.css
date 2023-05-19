@@ -64,7 +64,7 @@ body {
 }
 
 .art_box {
-    pointer-events: all;
+    pointer-events: all !important;
 }
 
 .stars {
