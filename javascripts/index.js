@@ -73,3 +73,19 @@ if ( ! localStorage.getItem('visited') ) {
   setTimeout(() => { alert("(°ー°〃): ... ..."); }, 3000);
 }
 
+// handling open portal 
+function isTheTime() {
+  let current_time_shanghai = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Shanghai" }));
+  let open_time_shanghai = new Date("2023-05-19T00:00:00");
+  return current_time_shanghai > open_time_shanghai;
+}
+
+function openPortal() {
+  if (isTheTime()) {
+      alert("(°ー°〃): 欢迎...");
+      window.location.href = "cake.html";
+  } else {
+      alert("(°ー°〃): 再等一会儿吧...")
+  }
+  return false;
+}
