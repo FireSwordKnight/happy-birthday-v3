@@ -17,7 +17,6 @@ for (let block of present_blocks) {
 // cursor icon and background music
 
   function switch_cursor() {
-        <img class="moon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
     const bgm = document.querySelector("#bgm");
     if (!(this.switched)) {
       document.body.style.cursor = "url('assets/clef.png'), auto";
